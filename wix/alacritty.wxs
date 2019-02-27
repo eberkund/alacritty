@@ -9,13 +9,15 @@
         <WixVariable Id="WixUILicenseRtf" Value="license.rtf"/>
         <Property Id="ARPPRODUCTICON" Value="AlacrittyIco"/>
         <MediaTemplate EmbedCab="yes"/>
-        <UIRef Id="WixUI_Minimal"/>
+        <UIRef Id="WixUI_FeatureTree"/>
 
         <Feature Id="ProductFeature" Title="ConsoleApp" Level="1">
             <ComponentRef Id="AlacrittyExe"/>
             <ComponentRef Id="WinPtyAgentExe"/>
             <ComponentRef Id="AlacrittyShortcut"/>
             <ComponentRef Id="ModifyPathEnv"/>
+        </Feature>
+        <Feature Id="ContextMenuFeature">
             <ComponentRef Id="ContextMenu"/>
         </Feature>
 
